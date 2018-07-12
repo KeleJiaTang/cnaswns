@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D54EAD4E-0069-4C92-8E72-14554BC1A008}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasWorkflowUILibrary</RootNamespace>
+    <AssemblyName>CnasWorkflowUILibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cnas.wns.CnasMetroFramework.Design">
+      <HintPath>..\Libraries\Cnas.wns.CnasMetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnas.wns.CnasMetroFramework.Fonts">
+      <HintPath>..\Libraries\Cnas.wns.CnasMetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasBarcodeLib">
+      <HintPath>..\Libraries\CnasBarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasCameraUC">
+      <HintPath>..\Libraries\CnasCameraUC.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasMetroFramework">
+      <HintPath>..\Libraries\CnasMetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="HVScanner">
+      <HintPath>..\Libraries\HVScanner.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarCodeHook.cs" />
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlViewBase.Designer.cs">
+      <DependentUpon>ControlViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConverter.cs" />
+    <Compile Include="Dialog\HCSWF_check_car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_check_car.Designer.cs">
+      <DependentUpon>HCSWF_check_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_check_send_setlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_check_send_setlist.Designer.cs">
+      <DependentUpon>HCSWF_check_send_setlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_device_result_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_device_result_add.Designer.cs">
+      <DependentUpon>HCSWF_device_result_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_instrument_RFID_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_instrument_RFID_search.Designer.cs">
+      <DependentUpon>HCSWF_instrument_RFID_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_order_choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_order_choose.Designer.cs">
+      <DependentUpon>HCSWF_order_choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_set_choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_set_choose.Designer.cs">
+      <DependentUpon>HCSWF_set_choose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_parameters_info..cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_parameters_info..Designer.cs">
+      <DependentUpon>HCSWF_parameters_info..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_parameters_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_parameters_select.Designer.cs">
+      <DependentUpon>HCSWF_parameters_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_procedure_manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_procedure_manual.Designer.cs">
+      <DependentUpon>HCSWF_procedure_manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_specialset_pack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_specialset_pack.Designer.cs">
+      <DependentUpon>HCSWF_specialset_pack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_urgent_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_urgent_set.Designer.cs">
+      <DependentUpon>HCSWF_urgent_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_all_send.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_all_send.Designer.cs">
+      <DependentUpon>HCSSM_order_all_send.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_forback_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_forback_manager.Designer.cs">
+      <DependentUpon>HCSSM_order_forback_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_image_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_image_add.Designer.cs">
+      <DependentUpon>HCSSM_order_image_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_person.Designer.cs">
+      <DependentUpon>HCSSM_order_person.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_setdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_setdetail.Designer.cs">
+      <DependentUpon>HCSSM_order_setdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_specialset_pack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_specialset_pack.Designer.cs">
+      <DependentUpon>HCSSM_order_specialset_pack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_undone_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_undone_manager.Designer.cs">
+      <DependentUpon>HCSSM_order_undone_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_manager.Designer.cs">
+      <DependentUpon>HCSSM_order_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_forback_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_forback_detail.Designer.cs">
+      <DependentUpon>HCSSM_order_forback_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order_detail.Designer.cs">
+      <DependentUpon>HCSSM_order_new_order_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order.Designer.cs">
+      <DependentUpon>HCSSM_order_new_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order_handle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_order_new_order_handle.Designer.cs">
+      <DependentUpon>HCSSM_order_new_order_handle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_send_new_order_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_send_new_order_create.Designer.cs">
+      <DependentUpon>HCSSM_send_new_order_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_send_order_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_send_order_detail.Designer.cs">
+      <DependentUpon>HCSSM_send_order_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_send_order_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_send_order_manager.Designer.cs">
+      <DependentUpon>HCSSM_send_order_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_set_release_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_set_release_result.Designer.cs">
+      <DependentUpon>HCSSM_set_release_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_set_search_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_set_search_manager.Designer.cs">
+      <DependentUpon>HCSSM_set_search_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_set_search_manager_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_set_search_manager_show.Designer.cs">
+      <DependentUpon>HCSSM_set_search_manager_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSWF_set_detail_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSWF_set_detail_new.Designer.cs">
+      <DependentUpon>HCSWF_set_detail_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCS_packset_all_dealinstrument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCS_packset_all_dealinstrument.Designer.cs">
+      <DependentUpon>HCS_packset_all_dealinstrument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCS_packset_dealinstrument_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCS_packset_dealinstrument_detail.Designer.cs">
+      <DependentUpon>HCS_packset_dealinstrument_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_quality_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_quality_new.Designer.cs">
+      <DependentUpon>HCSSM_statistics_quality_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_person_set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_person_set.Designer.cs">
+      <DependentUpon>HCSWF_person_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_edit.Designer.cs">
+      <DependentUpon>HCSSM_statistics_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_manager.Designer.cs">
+      <DependentUpon>HCSSM_statistics_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_quality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\HCSSM_statistics_quality.Designer.cs">
+      <DependentUpon>HCSSM_statistics_quality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_order_new.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_order_new.Designer.cs">
+      <DependentUpon>HCSWF_order_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_send_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_send_order.Designer.cs">
+      <DependentUpon>HCSWF_send_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_newshow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_newshow.Designer.cs">
+      <DependentUpon>HCSSM_set_message_newshow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_access_set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_access_set.designer.cs">
+      <DependentUpon>HCSWF_access_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_set_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\HCSWF_set_detail.Designer.cs">
+      <DependentUpon>HCSWF_set_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_load_car.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_load_car.Designer.cs">
+      <DependentUpon>HCSWF_load_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_send_orderList_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_send_orderList_manager.Designer.cs">
+      <DependentUpon>HCSWF_send_orderList_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_instrument_modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_instrument_modify.Designer.cs">
+      <DependentUpon>HCSWF_set_instrument_modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_specialset_packing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_specialset_packing.Designer.cs">
+      <DependentUpon>HCSWF_specialset_packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_storage_set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_storage_set.Designer.cs">
+      <DependentUpon>HCSWF_storage_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_packing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_packing.Designer.cs">
+      <DependentUpon>HCSWF_set_packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_dialog_container.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_dialog_container.Designer.cs">
+      <DependentUpon>HCSWF_dialog_container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowDialogGenerator.cs" />
+    <Compile Include="Workflow\HCSWF_access_car.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_access_car.Designer.cs">
+      <DependentUpon>HCSWF_access_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_device_load.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_device_load.Designer.cs">
+      <DependentUpon>HCSWF_set_device_load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_device_release.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workflow\HCSWF_set_device_release.Designer.cs">
+      <DependentUpon>HCSWF_set_device_release.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_manager.Designer.cs">
+      <DependentUpon>HCSSM_set_message_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_new.Designer.cs">
+      <DependentUpon>HCSSM_set_message_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessgeInfo\HCSSM_set_message_show.Designer.cs">
+      <DependentUpon>HCSSM_set_message_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DBServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlViewBase.resx">
+      <DependentUpon>ControlViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_check_car.resx">
+      <DependentUpon>HCSWF_check_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_check_send_setlist.resx">
+      <DependentUpon>HCSWF_check_send_setlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_device_result_add.resx">
+      <DependentUpon>HCSWF_device_result_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_instrument_RFID_search.resx">
+      <DependentUpon>HCSWF_instrument_RFID_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_order_choose.resx">
+      <DependentUpon>HCSWF_order_choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_set_choose.resx">
+      <DependentUpon>HCSWF_set_choose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_parameters_info..resx">
+      <DependentUpon>HCSWF_parameters_info..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_parameters_select.resx">
+      <DependentUpon>HCSWF_parameters_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_procedure_manual.resx">
+      <DependentUpon>HCSWF_procedure_manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_specialset_pack.resx">
+      <DependentUpon>HCSWF_specialset_pack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_urgent_set.resx">
+      <DependentUpon>HCSWF_urgent_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_all_send.resx">
+      <DependentUpon>HCSSM_order_all_send.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_forback_manager.resx">
+      <DependentUpon>HCSSM_order_forback_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_image_add.resx">
+      <DependentUpon>HCSSM_order_image_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_person.resx">
+      <DependentUpon>HCSSM_order_person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_setdetail.resx">
+      <DependentUpon>HCSSM_order_setdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_specialset_pack.resx">
+      <DependentUpon>HCSSM_order_specialset_pack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_undone_manager.resx">
+      <DependentUpon>HCSSM_order_undone_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_manager.resx">
+      <DependentUpon>HCSSM_order_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_forback_detail.resx">
+      <DependentUpon>HCSSM_order_forback_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_new_order_detail.resx">
+      <DependentUpon>HCSSM_order_new_order_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_new_order.resx">
+      <DependentUpon>HCSSM_order_new_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_order_new_order_handle.resx">
+      <DependentUpon>HCSSM_order_new_order_handle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_send_new_order_create.resx">
+      <DependentUpon>HCSSM_send_new_order_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_send_order_detail.resx">
+      <DependentUpon>HCSSM_send_order_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_send_order_manager.resx">
+      <DependentUpon>HCSSM_send_order_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_set_release_result.resx">
+      <DependentUpon>HCSSM_set_release_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_set_search_manager.resx">
+      <DependentUpon>HCSSM_set_search_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_set_search_manager_show.resx">
+      <DependentUpon>HCSSM_set_search_manager_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSWF_set_detail_new.resx">
+      <DependentUpon>HCSWF_set_detail_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCS_packset_all_dealinstrument.resx">
+      <DependentUpon>HCS_packset_all_dealinstrument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCS_packset_dealinstrument_detail.resx">
+      <DependentUpon>HCS_packset_dealinstrument_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Statistics\HCSSM_statistics_quality_new.resx">
+      <DependentUpon>HCSSM_statistics_quality_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_person_set.resx">
+      <DependentUpon>HCSWF_person_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\HCSSM_statistics_edit.resx">
+      <DependentUpon>HCSSM_statistics_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\HCSSM_statistics_manager.resx">
+      <DependentUpon>HCSSM_statistics_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\HCSSM_statistics_quality.resx">
+      <DependentUpon>HCSSM_statistics_quality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_order_new.resx">
+      <DependentUpon>HCSWF_order_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_send_order.resx">
+      <DependentUpon>HCSWF_send_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessgeInfo\HCSSM_set_message_newshow.resx">
+      <DependentUpon>HCSSM_set_message_newshow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_access_set.resx">
+      <DependentUpon>HCSWF_access_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\HCSWF_set_detail.resx">
+      <DependentUpon>HCSWF_set_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_access_car.resx">
+      <DependentUpon>HCSWF_access_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_dialog_container.resx">
+      <DependentUpon>HCSWF_dialog_container.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_load_car.resx">
+      <DependentUpon>HCSWF_load_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_send_orderList_manager.resx">
+      <DependentUpon>HCSWF_send_orderList_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_set_instrument_modify.resx">
+      <DependentUpon>HCSWF_set_instrument_modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_specialset_packing.resx">
+      <DependentUpon>HCSWF_specialset_packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_storage_set.resx">
+      <DependentUpon>HCSWF_storage_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_set_device_load.resx">
+      <DependentUpon>HCSWF_set_device_load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_set_device_release.resx">
+      <DependentUpon>HCSWF_set_device_release.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessgeInfo\HCSSM_set_message_manager.resx">
+      <DependentUpon>HCSSM_set_message_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessgeInfo\HCSSM_set_message_new.resx">
+      <DependentUpon>HCSSM_set_message_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessgeInfo\HCSSM_set_message_show.resx">
+      <DependentUpon>HCSSM_set_message_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\HCSWF_set_packing.resx">
+      <DependentUpon>HCSWF_set_packing.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBaseClassServer\CnasBaseClassServer.csproj">
+      <Project>{12f14118-e740-455b-9eed-155f84992db6}</Project>
+      <Name>CnasBaseClassServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSManagerUC\CnasHCSManagerUC.csproj">
+      <Project>{ffe1b015-a91e-4ac2-88bc-20428fb23104}</Project>
+      <Name>CnasHCSManagerUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSSystemUC\CnasHCSSystemUC.csproj">
+      <Project>{1097bd34-d984-4c78-9dcf-1e00bf8ea632}</Project>
+      <Name>CnasHCSSystemUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowArithmetic\CnasWorkflowArithmetic.csproj">
+      <Project>{f2f84e44-cf83-4390-9da9-ae90a52cefd4}</Project>
+      <Name>CnasWorkflowArithmetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.Common\CRD.Common.csproj">
+      <Project>{7cf59281-c9ba-47ca-b049-644f55e86d36}</Project>
+      <Name>CRD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3da5d631-16f3-4733-9fe0-71eeb24cd493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PromptMessage>
+  <warning>
+    <scanpass>扫描成功！！！</scanpass>
+    <usernameRequired>用户名未填写，请填写！</usernameRequired>
+    <userPassWordRequired>密码未填写，请填写！</userPassWordRequired>
+    <recyleset>请确认回收特殊器械包{0}-{1}。</recyleset>
+    <usernameRepetition>用户名已经存在，请重新填写！</usernameRepetition>
+    <nomanualwf>流程【"{0}"】没有任何手动处理配置，请联系管理员！！！</nomanualwf>
+    <nopdParameters>对不起！流程参数数据获取失败，不能继续。</nopdParameters>
+    <secdealset>对不起！请先选择要处理的包！！！</secdealset>
+    <notfindPrintTemplage>找不到打印模板，请联系管理员！！！</notfindPrintTemplage>
+    <selectprintset>请选择需要打印的器械包。</selectprintset>
+    <cfmsetremove>请确认是否把以下器械包移出列表？</cfmsetremove>
+    <notfindBCU>获取BCU生产码失败</notfindBCU>
+    <fillpackUser>请扫描打包人编码。</fillpackUser>
+    <fillcfmUser>请扫描审核员编码。</fillcfmUser>
+    <genNumvalid>生成数量请输入数字。</genNumvalid>
+    <nothavedata>找不到打印数据。</nothavedata>
+    <notconfigmanWf>流程【{0}】没有任何手动处理配置，请联系管理员！！！</notconfigmanWf>
+    <selectspecialset>请选择一个特殊器械包</selectspecialset>
+    <setgridhasdata>请确保列表中必须含有有器械包</setgridhasdata>
+    <selectset>请选择一个器械包</selectset>
+    <fillname>请填写{0}名称。</fillname>
+    <fillwastype>请选择清洗程序。</fillwastype>
+    <fillstrtype>请选择灭菌程序。</fillstrtype>
+    <configuresuccessful>恭喜你,配置成功。</configuresuccessful>
+    <addsuccessful>恭喜你，添加{0}成功。</addsuccessful>
+    <updatesuccessful>恭喜你，修改{0}成功。</updatesuccessful>
+    <deletesuccessful>恭喜你，删除{0}成功。</deletesuccessful>
+    <fillmaterial>请选择打包材料。</fillmaterial>
+    <fillprice>请填写{0}价格。</fillprice>
+    <filltype>请选择{0}类型。</filltype>
+    <fillcustomer>请选择所属客户。</fillcustomer>
+    <fillcostcenter>请选择成本中心。</fillcostcenter>
+    <fillput>请选择摆放方式。</fillput>
+    <fillweight>请选择重量。</fillweight>
+    <fillsize>请选择包的尺寸大小。</fillsize>
+    <filldifficulty>请选择清洗难度。</filldifficulty>
+    <filllocation>请选择使用地点。</filllocation>
+    <fillstorage>请选择存储点。</fillstorage>
+    <fillbrand>请选择品牌。</fillbrand>
+    <fillvender>请选择生产商。</fillvender>
+    <fillsales>请选择销售商。</fillsales>
+    <filstu>请选择机器的标准容积。</filstu>
+    <namerepetition>{0}名称已存在。</namerepetition>
+    <choicechange>请选择要{0}的{1}。</choicechange>
+    <fillloop>选择的实体包已经{0}循环内</fillloop>
+    <choicedelete>确定删除名字为{0}的{1}吗？</choicedelete>
+    <choicedelete2>确定删除选中的数据吗？</choicedelete2>
+    <relation>{0}已被{1}占用，如要删除，请先解除与{2}的关联。</relation>
+    <choiceset>请选择实体包</choiceset>
+    <successful>恭喜你，{0}成功</successful>
+    <fillRFID>请输入RFID。</fillRFID>
+    <fillprogram>新建流程前，请创建{0}。</fillprogram>
+    <fillruntime>请填写运行时间。</fillruntime>
+    <putcycle>你选择的实体包中{0}循环中的实体包，请重新选择。</putcycle>
+    <inputformat>{0}输入的格式不正确，请输入正确格式，如：{1}</inputformat>
+    <fillhightemperature>请填写温度上限。</fillhightemperature>
+    <filllowtemperature>请填写温度下限。</filllowtemperature>
+    <tempestimation>你输入温度下限的值有误，温度下限的值应该小于温度上限的值。</tempestimation>
+    <fillvolume>你输入最大容量的值不符合，请输入大于最小容量的值。</fillvolume>
+    <noitem>已经清空基本包。</noitem>
+    <choiceitem>请选择器械类型。</choiceitem>
+    <adddefeat>添加{0}失败。</adddefeat>S
+    <expiration>请填写保质天数。</expiration>
+    <nouser>该用户不存在在系统中，请确认。 用户条码：{0}</nouser>
+    <printlist>打印纸张大小与打印边距设置错误，无法适配打印内容，请重新设置默认打印机中打印纸张的大小及打印边距。</printlist>
+    <invalidbatchnum>请输入合法的批次编号！！！</invalidbatchnum>
+    <fillralla>请选择召回到哪一个流程。</fillralla>
+    <norecall>该批次还有没选择召回的包。</norecall>
+    <fillmoney>请填写运营费用。</fillmoney>
+    <fillinstrument>请选择订单中的器械、或器械包类型</fillinstrument>
+    <bigimage>第{0}张图片大于500kb，不允许导入。</bigimage>
+    <filladdinstrument>请选择要添加的器械、器械包或模板！</filladdinstrument>
+    <fillorderpack>必须绑定对应的BCUOT或BCU0R码!</fillorderpack>
+    <fillselectordername>请先选择订单号</fillselectordername>
+    <fillsendorder>已确认订单相应品名的此次发放数量生成发货单</fillsendorder>
+    <fillorderitem>请选择有效数据项</fillorderitem>
+    <fillorderitemadd>请在订单中添加有效数据项</fillorderitemadd>
+    <Configuration_tips>这台电脑没有配置工作区，请联系管理员作配置。</Configuration_tips>
+    <notfindUser>查找不带该用户，请确认输入正确。</notfindUser>
+    <choicecycledelete>该实体包在循环内，是否确定删除。</choicecycledelete>
+    <fail>移出循环失败</fail>
+  </warning>
+  <error>
+    <notfindSetGrid>配置错误，找不到器械包列表。</notfindSetGrid>
+    <errorprint>对不起！没有设置好流程条形码模版，请联系管理员。</errorprint>
+    <unknowerror>出现未知错误：{0},请联系管理员。  </unknowerror>
+    <errorloop>批量{0}，出现异常，请联系管理员。</errorloop>
+    
+    <errorimage>对不起！上传图片失败，请检查文件服务器和网络：{0}</errorimage>
+    
+    <errorseeim>对不起！图片预览失败，请检查文件服务器和网络。</errorseeim>
+    <failRecycleset>回收特殊器械包条码失败。</failRecycleset>
+    <userpassworderror>用户名或密码输入错误，请重新输入。</userpassworderror>
+    <urgentset>操作失败，请联系管理员。</urgentset>
+  </error>
+</PromptMessage>
+
+  

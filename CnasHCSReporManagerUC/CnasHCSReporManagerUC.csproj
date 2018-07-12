@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10E70EC4-F846-4961-9412-BA586D241B54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasHCSReporManagerUC</RootNamespace>
+    <AssemblyName>CnasHCSReporManagerUC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\AxInterop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DSOFramer">
+      <HintPath>..\Libraries\Interop.DSOFramer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HCSRM_custom_template_add.cs" />
+    <Compile Include="HCSRM_custom_template_add.Designer.cs">
+      <DependentUpon>HCSRM_custom_template_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_custom_template_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRM_custom_template_report.Designer.cs">
+      <DependentUpon>HCSRM_custom_template_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_custom_template_report_add.cs" />
+    <Compile Include="HCSRM_custom_template_report_add.Designer.cs">
+      <DependentUpon>HCSRM_custom_template_report_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_equipment_service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRM_equipment_service.Designer.cs">
+      <DependentUpon>HCSRM_equipment_service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_equipment_service_new.cs" />
+    <Compile Include="HCSRM_equipment_service_new.Designer.cs">
+      <DependentUpon>HCSRM_equipment_service_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_security_event_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRM_security_event_report.Designer.cs">
+      <DependentUpon>HCSRM_security_event_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRM_security_event_report_new.cs" />
+    <Compile Include="HCSRM_security_event_report_new.Designer.cs">
+      <DependentUpon>HCSRM_security_event_report_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HCSRM_custom_template_add.resx">
+      <DependentUpon>HCSRM_custom_template_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_custom_template_report.resx">
+      <DependentUpon>HCSRM_custom_template_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_custom_template_report_add.resx">
+      <DependentUpon>HCSRM_custom_template_report_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_equipment_service.resx">
+      <DependentUpon>HCSRM_equipment_service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_equipment_service_new.resx">
+      <DependentUpon>HCSRM_equipment_service_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_security_event_report.resx">
+      <DependentUpon>HCSRM_security_event_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRM_security_event_report_new.resx">
+      <DependentUpon>HCSRM_security_event_report_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBarcodeLib\CnasBarcodeLib.csproj">
+      <Project>{f8646414-0c9c-49bb-9da3-3923bf78a398}</Project>
+      <Name>CnasBarcodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSManagerUC\CnasHCSManagerUC.csproj">
+      <Project>{ffe1b015-a91e-4ac2-88bc-20428fb23104}</Project>
+      <Name>CnasHCSManagerUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

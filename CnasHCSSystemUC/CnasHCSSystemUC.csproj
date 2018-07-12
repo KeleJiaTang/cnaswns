@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1097BD34-D984-4C78-9DCF-1E00BF8EA632}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasHCSSystemUC</RootNamespace>
+    <AssemblyName>CnasHCSSystemUC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Pdf.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Schedule.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="CnasCameraDirectShowLib, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CnasCameraDirectShowLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CRD.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CRD.Common\bin\Debug\CRD.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\cnaswns\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HCSSM_app.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_app.Designer.cs">
+      <DependentUpon>HCSSM_app.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_app_activate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_app_activate.Designer.cs">
+      <DependentUpon>HCSSM_app_activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_app_bpm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_app_bpm.Designer.cs">
+      <DependentUpon>HCSSM_app_bpm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_barcode_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_barcode_manager.Designer.cs">
+      <DependentUpon>HCSSM_barcode_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_login_configuration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_login_configuration.Designer.cs">
+      <DependentUpon>HCSSM_login_configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_login_configuration_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_login_configuration_edit.Designer.cs">
+      <DependentUpon>HCSSM_login_configuration_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure.Designer.cs">
+      <DependentUpon>HCSSM_procedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parameters.Designer.cs">
+      <DependentUpon>HCSSM_procedure_parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersmanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersmanager.Designer.cs">
+      <DependentUpon>HCSSM_procedure_parametersmanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersvalue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersvalue.Designer.cs">
+      <DependentUpon>HCSSM_procedure_parametersvalue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersvaluemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_parametersvaluemanager.Designer.cs">
+      <DependentUpon>HCSSM_procedure_parametersvaluemanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_relation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_relation.Designer.cs">
+      <DependentUpon>HCSSM_procedure_relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_relationship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_relationship.Designer.cs">
+      <DependentUpon>HCSSM_procedure_relationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_set_image.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_set_image.Designer.cs">
+      <DependentUpon>HCSSM_set_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_system_config_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_system_config_manager.Designer.cs">
+      <DependentUpon>HCSSM_system_config_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_usergroup_location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_usergroup_location.Designer.cs">
+      <DependentUpon>HCSSM_usergroup_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user_group.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user_group.Designer.cs">
+      <DependentUpon>HCSSM_user_group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user_group_app.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user_group_app.Designer.cs">
+      <DependentUpon>HCSSM_user_group_app.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user_group_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user_group_new.Designer.cs">
+      <DependentUpon>HCSSM_user_group_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user_group_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user_group_user.Designer.cs">
+      <DependentUpon>HCSSM_user_group_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_usergroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_usergroup.Designer.cs">
+      <DependentUpon>HCSSM_usergroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user_new.Designer.cs">
+      <DependentUpon>HCSSM_user_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_user.Designer.cs">
+      <DependentUpon>HCSSM_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HCSSM_app.resx">
+      <DependentUpon>HCSSM_app.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_app_activate.resx">
+      <DependentUpon>HCSSM_app_activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_app_bpm.resx">
+      <DependentUpon>HCSSM_app_bpm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_barcode_manager.resx">
+      <DependentUpon>HCSSM_barcode_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_login_configuration.resx">
+      <DependentUpon>HCSSM_login_configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_login_configuration_edit.resx">
+      <DependentUpon>HCSSM_login_configuration_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure.resx">
+      <DependentUpon>HCSSM_procedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_parameters.resx">
+      <DependentUpon>HCSSM_procedure_parameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_parametersmanager.resx">
+      <DependentUpon>HCSSM_procedure_parametersmanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_parametersvalue.resx">
+      <DependentUpon>HCSSM_procedure_parametersvalue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_parametersvaluemanager.resx">
+      <DependentUpon>HCSSM_procedure_parametersvaluemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_relation.resx">
+      <DependentUpon>HCSSM_procedure_relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_relationship.resx">
+      <DependentUpon>HCSSM_procedure_relationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_set_image.resx">
+      <DependentUpon>HCSSM_set_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_system_config_manager.resx">
+      <DependentUpon>HCSSM_system_config_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_usergroup_location.resx">
+      <DependentUpon>HCSSM_usergroup_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user_group.resx">
+      <DependentUpon>HCSSM_user_group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user_group_app.resx">
+      <DependentUpon>HCSSM_user_group_app.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user_group_new.resx">
+      <DependentUpon>HCSSM_user_group_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user_group_user.resx">
+      <DependentUpon>HCSSM_user_group_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_usergroup.resx">
+      <DependentUpon>HCSSM_usergroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user_new.resx">
+      <DependentUpon>HCSSM_user_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_user.resx">
+      <DependentUpon>HCSSM_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBarcodeLib\CnasBarcodeLib.csproj">
+      <Project>{f8646414-0c9c-49bb-9da3-3923bf78a398}</Project>
+      <Name>CnasBarcodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseClassServer\CnasBaseClassServer.csproj">
+      <Project>{12f14118-e740-455b-9eed-155f84992db6}</Project>
+      <Name>CnasBaseClassServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasCameraUC\CnasCameraUC.csproj">
+      <Project>{e6052609-a070-41d5-85b9-acaba91170c5}</Project>
+      <Name>CnasCameraUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3DA5D631-16F3-4733-9FE0-71EEB24CD493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wf_test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wf_up.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

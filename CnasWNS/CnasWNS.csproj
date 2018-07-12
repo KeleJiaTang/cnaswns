@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71BF4897-F0FB-4950-ADC8-2C90FB15E617}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns</RootNamespace>
+    <AssemblyName>Cnas.wns</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CnasBarcodeLib">
+      <HintPath>..\CnasBarcodeLib\bin\Debug\CnasBarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasMetroFramework, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CnasMetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Libraries\Interop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuickStart">
+      <HintPath>..\Libraries\QuickStart.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\Libraries\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock">
+      <HintPath>..\Libraries\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Desert.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light">
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2016.1.216.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2016.1.216.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows7, Version=2016.1.216.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\Libraries\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CnasMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CnasMain.Designer.cs">
+      <DependentUpon>CnasMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyContext .cs" />
+    <Compile Include="mytest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mytest.Designer.cs">
+      <DependentUpon>mytest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreenApplicationContext .cs" />
+    <EmbeddedResource Include="CnasMain.resx">
+      <DependentUpon>CnasMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mytest.resx">
+      <DependentUpon>mytest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSManagerUC\CnasHCSManagerUC.csproj">
+      <Project>{ffe1b015-a91e-4ac2-88bc-20428fb23104}</Project>
+      <Name>CnasHCSManagerUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSReporManagerUC\CnasHCSReporManagerUC.csproj">
+      <Project>{10e70ec4-f846-4961-9412-ba586d241b54}</Project>
+      <Name>CnasHCSReporManagerUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSReport\CnasHCSReport.csproj">
+      <Project>{858e5492-babc-44c5-a095-01b763a12a87}</Project>
+      <Name>CnasHCSReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSSystemUC\CnasHCSSystemUC.csproj">
+      <Project>{1097bd34-d984-4c78-9dcf-1e00bf8ea632}</Project>
+      <Name>CnasHCSSystemUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSWorkspaceDecon\CnasHCSWorkspaceDecon.csproj">
+      <Project>{3ecff75d-4c34-43c6-a8b8-6f41c2379045}</Project>
+      <Name>CnasHCSWorkspaceDecon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasRFIDManager\CnasRFIDManager.csproj">
+      <Project>{b899edce-a031-47c6-9b84-9bf179af4891}</Project>
+      <Name>CnasRFIDManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowArithmetic\CnasWorkflowArithmetic.csproj">
+      <Project>{f2f84e44-cf83-4390-9da9-ae90a52cefd4}</Project>
+      <Name>CnasWorkflowArithmetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowUILibrary\CnasWorkflowUILibrary.csproj">
+      <Project>{d54ead4e-0069-4c92-8e72-14554bc1a008}</Project>
+      <Name>CnasWorkflowUILibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.Common\CRD.Common.csproj">
+      <Project>{7cf59281-c9ba-47ca-b049-644f55e86d36}</Project>
+      <Name>CRD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3da5d631-16f3-4733-9fe0-71eeb24cd493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\WFDialogConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\messagedata.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_costcenter_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_customer_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_entityset_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_instrument_type_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_location_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_plasticenvelop_device.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_set_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_sterilizer_device.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_storage_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_transport_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_vender_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_washing_device.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSDM.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSDM_instrument_datainout.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSMD.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSMD_monitor.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_operations_report.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_app.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_barcode_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_login_configuration.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_procedure.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_set_image.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_user.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_user_group.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_workspace.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_workspace1.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_workspace2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_workspace3.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSMD_store_workbench.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\icon\MainIco.ico" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\default\defaultBgHor.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\default\defaultBgVir.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_instrument_type_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_entityset_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_costcenter_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_customer_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_location_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_plasticenvelop_device_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_set_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_sterilizer_device_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_storage_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_transport_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_vender_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_washing_device_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_sterilizer_ascend.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSMD_monitor_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_cost_accounting.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_cost_accounting_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_operational_costs.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_operational_costs_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_performance_appraisal.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_performance_appraisal_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_setbatch_ascend.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_setbatch_ascend_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_setstorage_ascend.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_setstorage_ascend_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_set_recall.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_set_recall_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_app_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_barcode_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_login_configuration_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_procedure_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_set_image_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_user_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_user_group_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_specialset_tem.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_orderNum_manage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_orderNum_manage_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_specialset_tem_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\batchImportOld.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\configureSet.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\configureSterilizer.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\createPackage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\edit.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\new.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\packageSel.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\packingMaterial.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\pictureView.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\printList.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\program.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\set.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\sterilizer.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\temporarySet.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\instrument.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\batchImportNew.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\configurationDepartment.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\delete.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\department.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\export.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\feedingCycle.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\groupPermissions.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\import.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\instrumentManagement.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\outCycle.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\packingList.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Photo.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\photoImport.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\printCode.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_orderset_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_orderset_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\relatedProgram.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\addItem.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\printer.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\appProcess.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\manualPrinting.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\moduleActivation.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\parameterSetting.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\personnel.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\processConfiguration.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\processParameter.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\user.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\userGroup.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_system_config_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSSM_system_config_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Reset.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\orderma.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\packspset.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\ordermanager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\bcc3omanage.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\stopwarning.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\allLeft.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\allRight.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\allShow.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\cancel.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\configurationCostCenter.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\delete2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\downloadImportTemplate.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\enlarge.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\instrumentsNumber.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\leftShift.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\manualParameter.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\modifyOrder.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\narrow.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\new2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\OK.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Preservation.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\rightShift.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\savePicture.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\selectSet.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\testCondition.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\updateCriteria.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\washinger.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\recall.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\recallset.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\userset.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mbcc3oManage40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mCheckOrder32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mCheckSend32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mClose32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mDoOrder32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGenerate32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mLeft32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOK32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mPrint32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mPriview32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRefresh16.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRefresh32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRight32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mScanCode40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSearch16.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSearch32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSetManager40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSetSearch40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSetSpPack40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGrayLight32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGreenLight32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mDelete32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mModify32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mStopWarning32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\setQuality40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOrderAdd40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mDoOrder40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOrderSearch40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSendManager40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSendOrder40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOvertime32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mPassTime32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_washing_ascend.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_washing_ascend_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\msendordersearch.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\msendorderview.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\msendorder.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\msearch.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mrefresh.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mprint.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderview.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mordersubmit.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mordersearch.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderrefresh.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderprint.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderpreview.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderout.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mordernew.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderdeal2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderclose.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\morderbuild.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mOK.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mmodify.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mdelete.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\mclose.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\graylight.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\greenlight.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOrderview32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSendorderv32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Choice.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\deleteRow.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSendorderBuild32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSendorderView32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mLeft32-2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRight32-2.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\default\welcomeBackImg.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_security_event_report.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_security_event_report_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mImport32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mPhoto32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_equipment_service.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSDM_instrument_datainout_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_custom_template_report.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_custom_template_report_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRM_equipment_service_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_sterilizer_ascend_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mCancelImport32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGrayLight40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGreenLight40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRedLight40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGrayLight50.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mGreenLight50.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRedLight50.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\people.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\cleantemplat.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\bindingRFID.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\configurationRFID.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\empty.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\reBind.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\removeBinding.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\book.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\books_stack.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_custom_report.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_custom_report_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_eighteen_indicators.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mPatient32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\select_big.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\default\lg_frm_bg02.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Location.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\lookinstrument.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\lookset.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mOrderImage32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mClose40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mConfirm40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mRechoose40.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_outside_set.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSRS_outside_set_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_department_equipment_manager.png" />
+    <EmbeddedResource Include="Resources\Strawberry\MenuIcon\HCSCM_department_equipment_manager_24.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSave32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mSetting32.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\save.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\setting.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\ManualCount.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\OutGoing.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Register.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\Journal.png" />
+    <EmbeddedResource Include="Resources\Strawberry\Common\Buttom\WorkSpace\mUrgent32.png" />
+    <Content Include="systemico\0.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

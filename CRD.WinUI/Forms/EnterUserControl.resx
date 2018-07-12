@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnlBackGroup.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk22CgAAAAAAADYAAAAoAAAABwAAAHAAAAABABgAAAAAAAAAAAASCwAAEgsAAAAAAAAAAAAA//ny//ny
+        //ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny
+        //nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny
+        //ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny
+        //nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny
+        //ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny
+        //nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny//ny//ny//ny//ny//nyXrQT//ny//ny
+        //nx//ny//ny//ny//nyXrQT//ny//ny//nx//ny//nx//nx//nyXrQT//nx//nx//ny//nx//nx//ny
+        //nyXrQT//nx//nx//ny//ny//ny//ny//nxXrQT//nx//jx//ny//ny//nx//nx//nyXrQT//jy//jx
+        //nx//jx//nx//jx//nxXrQT//nx//nx//nx//nx//jx//nx//nxXrQT//nw//nw//nx//jx//nx//jx
+        //nxXrQT//jw//nx//nx//nw//nx//nw//nwXrQT//nx//jw//jx//nw//nw//nx//nwXrQT//nw//nw
+        //nx//nw//nx//jw//jwXrQT//nw//jw//nx//jw//nw//jw//jwXrQT//nw//nx//jw//jw//nw//jx
+        //nwXrQT//jw//jw//jw//jw//jw//jw//nwXrQT//jw//nw//jw//nw//jv//jw//jwXrQT//jw//jw
+        //jv//jw//jv//jv//nvXrQT//jw//nv//nv//jw//nv//jv//nwXrQT//jv//jw//nw//jv//nv//jv
+        //jvXrQT//nv//nv//nv//jv//jw//jv//jvXrQT//jv//jv//jv//ju//jv//jv//jvXrQT//jv//ju
+        //jv//ju//jv//nu//jvXrQT//jv//ju//ju//jv//jv//ju//jvXrQT//ju//ju//ju//jv//ju//ju
+        //juXrQT//ju//ju//ju//ju//ju//ju//juXrQT//jt//jt//ju//ju//jt//ju//juXrQT//ju//jt
+        //ju//ju//jt//ju//jtXrQT//jt//jt//ju//jt//jt//jt//juXrQT//ft//fu//jt//jt//jt//jt
+        //jtXrQT//jt//jt//jt//jt//jt//ft//ftXrQT//jt//js//jt//js//ft//ft//jtXrQT//ft//jt
+        //fs//js//ft//fs//jsXrQT//js//fs//js//js//js//fs//fsXrQT//fs//fs//js//js//js//js
+        //jsXrQT//js//fr//fs//fs//js//fs//fsXrQT//fs//fs//fs//fs//fr//fs//jrXrQT//fr//jr
+        //fr//jr//fs//jr//fsXrQT//jr//fr//fr//fr//fr//jr//frXrQT//fr//jr//fr//jr//fr//fr
+        //frXrQT//fr//fq//fr//fr//jq//fq//frXrQT//fq//fq//fr//fr//jr//fr//frXrQT//fr//fq
+        //fq//fr//fr//jr//fqXrQT//fq//fq//fq//fq//fq//fq//fqXrQT//fq//fq//fp//fp//fq//fq
+        //bqXrQT//bp//fp//fq//fq//fp//fq//fqXrQT//fp//fp//fp//fp//fp//fp//fpXrQT//bq//bp
+        //fp//fp//bp//fp//fpXrQT//bp//fp//fp//fp//bp//fp//fpXrQT//fp//bp//fo//fo//bp//fp
+        //fpXrQT//bo//fo//bo//bo//bp//fp//boXrQT//bo//fp//fo//fo//fo//fo//foXrQT//fo//bo
+        //fo//fo//bo//bo//foXrQT//fo//fo//bo//fo//bn//bn//foXrQT//bo//fn//bo//bn//bo//bo
+        //foXrQT//bn//bo//bn//bn//bo//fn//bnXrQT//bn//bo//bn//bn//fn//fn//fnXrQT//bn//bn
+        //bn//bn//bn//fn//bnXrQT//bm//fn//bm//bn//bn//bn//bmXrQT//bn//bn//bm//bm//bn//bm
+        //bmXrQT//bm//bm//bm//bm//bm//bm//bmXrQT//bm//bl//bm//bm//bm//bm//bmXrQT//bm//bm
+        //bm//bl//bm//bm//bmXrQT//bm//bl//bm//bm//bm//bm//bmXrQT//bl//Xl//bm//bm//bm//bl
+        //bmXrQT//bm//bl//Xl//bm//bl//Xl//blXrQT//bl//bl//bl//Xl//bl//bl//blXrQT//Xl//Xk
+        //bl//bk//bl//Xk//blXrQT//Xl//Xl//bl//bl//bl//bl//bkXrQT//bl//bl//Xk//Xk//bl//bk
+        //XkXrQT//Xk//Xk//Xk//bl//bl//Xk//XkXrQT//Xk//bk//Xk//bk//Xk//bk//XkXrQT//Xj//Xk
+        //bk//bk//bk//bk//bkXrQT//bk//Xk//bk//bj//bj//Xk//XkXrQT//bj//bk//bk//Xk//Xk//bj
+        //XkXrQT//Xj//Xk//Xk//Xj//bj//Xj//bjXrQT//Xj//Xk//Xj//Xj//bj//Xj//XkXrQT//Xj//bj
+        //bk//Xk//Xj//Xj//XjXrQT//Xj//Xj//Xj//bj//bj//Xj//bjXrQT//Xj//Xj//Xi//Xi//Xj//Xj
+        //XiXrQT//Xi//Xi//Xj//Xi//Xj//bj//XjXrQT//Xj//Xi//Xi//Xj//Xi//Xj//bjXrQT//Xj//Xj
+        //Xi//Xi//bi//Xi//XiXrQT//Xi//Xj//Xi//Xj//Xi//Xi//XiXrQT//Xi//Xi//Xj//bj//Xj//Xi
+        //XjXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi
+        //Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi
+        //XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi
+        //Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi
+        //XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi
+        //Xi//Xi//Xi//Xi//XiXrQT//Xi//Xi//Xi//Xi//Xi//Xi//XiXrQT
+</value>
+  </data>
+</root>

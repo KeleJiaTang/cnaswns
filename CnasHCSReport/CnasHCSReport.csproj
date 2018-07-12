@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{858E5492-BABC-44C5-A095-01B763A12A87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasHCSReport</RootNamespace>
+    <AssemblyName>CnasHCSReport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Pdf.4, Version=4.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.C1Pdf.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.4">
+      <HintPath>..\Libraries\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Zip.4">
+      <HintPath>..\Libraries\C1.C1Zip.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.4">
+      <HintPath>..\Libraries\C1.Win.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart3D.4">
+      <HintPath>..\Libraries\C1.Win.C1Chart3D.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Command.4">
+      <HintPath>..\Libraries\C1.Win.C1Command.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Document.4">
+      <HintPath>..\Libraries\C1.Win.C1Document.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Editor.4">
+      <HintPath>..\Libraries\C1.Win.C1Editor.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1GanttView.4">
+      <HintPath>..\Libraries\C1.Win.C1GanttView.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Gauge.4, Version=4.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.Win.C1Gauge.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.4">
+      <HintPath>..\Libraries\C1.Win.C1Input.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Ssrs.4">
+      <HintPath>..\Libraries\C1.Win.C1Ssrs.4.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasBarcodeLib, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CnasBarcodeLib\bin\Debug\CnasBarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasHCSManagerUC">
+      <HintPath>..\CnasHCSManagerUC\bin\Debug\CnasHCSManagerUC.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasMetroFramework">
+      <HintPath>..\Libraries\CnasMetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasWorkflowArithmetic">
+      <HintPath>..\CnasWorkflowArithmetic\bin\Debug\CnasWorkflowArithmetic.dll</HintPath>
+    </Reference>
+    <Reference Include="CRD.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CRD.Common\bin\Debug\CRD.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="QuickStart, Version=2016.1.216.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\QuickStart.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.ChartView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextBox, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.SpellChecker, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HCSRS_outside_set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_outside_set.Designer.cs">
+      <DependentUpon>HCSRS_outside_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_common_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_common_dialog.Designer.cs">
+      <DependentUpon>HCSRS_common_dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_custom_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_custom_report.Designer.cs">
+      <DependentUpon>HCSRS_custom_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_outsideset_instrument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_outsideset_instrument.Designer.cs">
+      <DependentUpon>HCSRS_outsideset_instrument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_outsideset_patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_outsideset_patient.Designer.cs">
+      <DependentUpon>HCSRS_outsideset_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_statistical_index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_statistical_index.Designer.cs">
+      <DependentUpon>HCSRS_statistical_index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_DisinfectFail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_DisinfectFail.Designer.cs">
+      <DependentUpon>HCSRS_DisinfectFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_DisposeDressing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_DisposeDressing.Designer.cs">
+      <DependentUpon>HCSRS_DisposeDressing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_DisposeInstrument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_DisposeInstrument.Designer.cs">
+      <DependentUpon>HCSRS_DisposeInstrument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_FindSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_FindSet.Designer.cs">
+      <DependentUpon>HCSRS_FindSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_operational_costs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_operational_costs.Designer.cs">
+      <DependentUpon>HCSRS_operational_costs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_operational_costs_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_operational_costs_new.Designer.cs">
+      <DependentUpon>HCSRS_operational_costs_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_cost_accounting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_cost_accounting.Designer.cs">
+      <DependentUpon>HCSRS_cost_accounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_operations_report3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_operations_report3.Designer.cs">
+      <DependentUpon>HCSRS_operations_report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_operations_report1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_operations_report1.Designer.cs">
+      <DependentUpon>HCSRS_operations_report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_operations_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_operations_report.Designer.cs">
+      <DependentUpon>HCSRS_operations_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal.Designer.cs">
+      <DependentUpon>HCSRS_performance_appraisal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal_department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal_department.Designer.cs">
+      <DependentUpon>HCSRS_performance_appraisal_department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_performance_appraisal_select.Designer.cs">
+      <DependentUpon>HCSRS_performance_appraisal_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_select_washerdevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_select_washerdevice.Designer.cs">
+      <DependentUpon>HCSRS_select_washerdevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_setbatch_ascend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_setbatch_ascend.Designer.cs">
+      <DependentUpon>HCSRS_setbatch_ascend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_setpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_setpatient.Designer.cs">
+      <DependentUpon>HCSRS_setpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_setstorage_ascend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_setstorage_ascend.Designer.cs">
+      <DependentUpon>HCSRS_setstorage_ascend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_set_recall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_set_recall.Designer.cs">
+      <DependentUpon>HCSRS_set_recall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_sterilizer_ascend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_sterilizer_ascend.Designer.cs">
+      <DependentUpon>HCSRS_sterilizer_ascend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_HistogramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_HistogramForm.Designer.cs">
+      <DependentUpon>HCSRS_HistogramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_OutsideInstruments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_OutsideInstruments.Designer.cs">
+      <DependentUpon>HCSRS_OutsideInstruments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_wasbatch_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_wasbatch_set.Designer.cs">
+      <DependentUpon>HCSRS_wasbatch_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_washing_ascend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSRS_washing_ascend.Designer.cs">
+      <DependentUpon>HCSRS_washing_ascend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HCSRS_RadForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_RadForm1.Designer.cs">
+      <DependentUpon>HCSRS_RadForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_reportTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_reportTable.Designer.cs">
+      <DependentUpon>HCSRS_reportTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_SecondSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_SecondSend.Designer.cs">
+      <DependentUpon>HCSRS_SecondSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_SelectSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_SelectSet.Designer.cs">
+      <DependentUpon>HCSRS_SelectSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_SelectTemporary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_SelectTemporary.Designer.cs">
+      <DependentUpon>HCSRS_SelectTemporary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_SterilizerDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_SterilizerDevice.Designer.cs">
+      <DependentUpon>HCSRS_SterilizerDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_sterilizermelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_sterilizermelt.Designer.cs">
+      <DependentUpon>HCSRS_sterilizermelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_washingno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_washingno.Designer.cs">
+      <DependentUpon>HCSRS_washingno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSRS_unsterilizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSRS_unsterilizer.Designer.cs">
+      <DependentUpon>HCSRS_unsterilizer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HCSRS_outside_set.resx">
+      <DependentUpon>HCSRS_outside_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_common_dialog.resx">
+      <DependentUpon>HCSRS_common_dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_outsideset_instrument.resx">
+      <DependentUpon>HCSRS_outsideset_instrument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_outsideset_patient.resx">
+      <DependentUpon>HCSRS_outsideset_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_statistical_index.resx">
+      <DependentUpon>HCSRS_statistical_index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_cost_accounting.en.resx">
+      <DependentUpon>HCSRS_cost_accounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_custom_report.resx">
+      <DependentUpon>HCSRS_custom_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_DisinfectFail.en.resx">
+      <DependentUpon>HCSRS_DisinfectFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_DisinfectFail.resx">
+      <DependentUpon>HCSRS_DisinfectFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_DisposeDressing.resx">
+      <DependentUpon>HCSRS_DisposeDressing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_DisposeInstrument.resx">
+      <DependentUpon>HCSRS_DisposeInstrument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_FindSet.resx">
+      <DependentUpon>HCSRS_FindSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_operational_costs.resx">
+      <DependentUpon>HCSRS_operational_costs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_operational_costs_new.resx">
+      <DependentUpon>HCSRS_operational_costs_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_cost_accounting.resx">
+      <DependentUpon>HCSRS_cost_accounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_operations_report3.resx">
+      <DependentUpon>HCSRS_operations_report3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_operations_report1.resx">
+      <DependentUpon>HCSRS_operations_report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_operations_report.resx">
+      <DependentUpon>HCSRS_operations_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_performance_appraisal.resx">
+      <DependentUpon>HCSRS_performance_appraisal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_performance_appraisal_department.resx">
+      <DependentUpon>HCSRS_performance_appraisal_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_performance_appraisal_select.resx">
+      <DependentUpon>HCSRS_performance_appraisal_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_select_washerdevice.en.resx">
+      <DependentUpon>HCSRS_select_washerdevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_select_washerdevice.resx">
+      <DependentUpon>HCSRS_select_washerdevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_setbatch_ascend.resx">
+      <DependentUpon>HCSRS_setbatch_ascend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_setpatient.resx">
+      <DependentUpon>HCSRS_setpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_setstorage_ascend.resx">
+      <DependentUpon>HCSRS_setstorage_ascend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_set_recall.resx">
+      <DependentUpon>HCSRS_set_recall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_sterilizer_ascend.resx">
+      <DependentUpon>HCSRS_sterilizer_ascend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_HistogramForm.resx">
+      <DependentUpon>HCSRS_HistogramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_OutsideInstruments.resx">
+      <DependentUpon>HCSRS_OutsideInstruments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_wasbatch_set.resx">
+      <DependentUpon>HCSRS_wasbatch_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_washing_ascend.resx">
+      <DependentUpon>HCSRS_washing_ascend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="HCSRS_RadForm1.resx">
+      <DependentUpon>HCSRS_RadForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_reportTable.resx">
+      <DependentUpon>HCSRS_reportTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_SecondSend.resx">
+      <DependentUpon>HCSRS_SecondSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_SelectSet.resx">
+      <DependentUpon>HCSRS_SelectSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_SelectTemporary.resx">
+      <DependentUpon>HCSRS_SelectTemporary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_SterilizerDevice.resx">
+      <DependentUpon>HCSRS_SterilizerDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_sterilizermelt.resx">
+      <DependentUpon>HCSRS_sterilizermelt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_washingno.resx">
+      <DependentUpon>HCSRS_washingno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSRS_unsterilizer.resx">
+      <DependentUpon>HCSRS_unsterilizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowUILibrary\CnasWorkflowUILibrary.csproj">
+      <Project>{D54EAD4E-0069-4C92-8E72-14554BC1A008}</Project>
+      <Name>CnasWorkflowUILibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3DA5D631-16F3-4733-9FE0-71EEB24CD493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

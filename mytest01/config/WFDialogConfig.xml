@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configs>
+  <config pdCode="2010" isLoad="true" dialogName="HCSWF_access_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="2020" isLoad="true" dialogName="HCSWF_access_set" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_set" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="2029" isLoad="true" dialogName="HCSWF_set_device_load" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_device_load" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="2030" isLoad="true" dialogName="HCSWF_set_device_load" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_device_load" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="3010" isLoad="true" dialogName="HCSWF_set_device_release" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_device_release" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="3020" isLoad="true" dialogName="HCSWF_set_packing" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_packing" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="3030" isLoad="true" dialogName="HCSWF_set_device_load" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_device_load" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="4010" isLoad="true" dialogName="HCSWF_set_device_release" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_set_device_release" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="4015" isLoad="true" dialogName="HCSWF_storage_set" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_storage_set" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="4016" isLoad="true" dialogName="HCSWF_storage_set" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_storage_set" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="4020" isLoad="true" dialogName="HCSWF_load_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_load_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="4030" isLoad="true" dialogName="HCSWF_access_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5010" isLoad="true" dialogName="HCSWF_access_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5020" isLoad="true" dialogName="HCSWF_access_set" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_set" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5040" isLoad="true" dialogName="HCSWF_access_set" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_set" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5050" isLoad="true" dialogName="HCSWF_load_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_load_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5052" isLoad="true" dialogName="HCSWF_send_order" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_send_order" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+  <config pdCode="5060" isLoad="true" dialogName="HCSWF_access_car" fullName="Cnas.wns.CnasWorkflowUILibrary.HCSWF_access_car" namespace="Cnas.wns.CnasWorkflowUILibrary" assembly="CnasWorkflowUILibrary"/>
+</configs>

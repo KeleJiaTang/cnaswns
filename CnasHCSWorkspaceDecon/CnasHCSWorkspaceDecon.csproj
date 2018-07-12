@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3ECFF75D-4C34-43C6-A8B8-6F41C2379045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasHCSWorkspaceDecon</RootNamespace>
+    <AssemblyName>CnasHCSWorkspaceDecon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cnas.wns.CnasMetroFramework.Design, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Cnas.wns.CnasMetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnas.wns.CnasMetroFramework.Fonts, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Cnas.wns.CnasMetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasCameraDirectShowLib, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CnasCameraDirectShowLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasCameraUC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CnasCameraUC.dll</HintPath>
+    </Reference>
+    <Reference Include="CnasMetroFramework, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CnasMetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TelerikCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HCSSM_parameters_info..cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_parameters_info..Designer.cs">
+      <DependentUpon>HCSSM_parameters_info..cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_parameters_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_parameters_select.Designer.cs">
+      <DependentUpon>HCSSM_parameters_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_procedure_manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_procedure_manual.Designer.cs">
+      <DependentUpon>HCSSM_procedure_manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_scan_barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSSM_scan_barcode.Designer.cs">
+      <DependentUpon>HCSSM_scan_barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSSM_workspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSSM_workspace.Designer.cs">
+      <DependentUpon>HCSSM_workspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSWF_Workspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSWF_Workspace.Designer.cs">
+      <DependentUpon>HCSWF_Workspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HCSSM_parameters_info..resx">
+      <DependentUpon>HCSSM_parameters_info..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_parameters_select.resx">
+      <DependentUpon>HCSSM_parameters_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_procedure_manual.resx">
+      <DependentUpon>HCSSM_procedure_manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_scan_barcode.resx">
+      <DependentUpon>HCSSM_scan_barcode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSSM_workspace.resx">
+      <DependentUpon>HCSSM_workspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="HCSWF_Workspace.resx">
+      <DependentUpon>HCSWF_Workspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBarcodeLib\CnasBarcodeLib.csproj">
+      <Project>{f8646414-0c9c-49bb-9da3-3923bf78a398}</Project>
+      <Name>CnasBarcodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSSystemUC\CnasHCSSystemUC.csproj">
+      <Project>{1097bd34-d984-4c78-9dcf-1e00bf8ea632}</Project>
+      <Name>CnasHCSSystemUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowArithmetic\CnasWorkflowArithmetic.csproj">
+      <Project>{f2f84e44-cf83-4390-9da9-ae90a52cefd4}</Project>
+      <Name>CnasWorkflowArithmetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasWorkflowUILibrary\CnasWorkflowUILibrary.csproj">
+      <Project>{d54ead4e-0069-4c92-8e72-14554bc1a008}</Project>
+      <Name>CnasWorkflowUILibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.Common\CRD.Common.csproj">
+      <Project>{7cf59281-c9ba-47ca-b049-644f55e86d36}</Project>
+      <Name>CRD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3da5d631-16f3-4733-9fe0-71eeb24cd493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

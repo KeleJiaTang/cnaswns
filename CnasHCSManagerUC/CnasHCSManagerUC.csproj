@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFE1B015-A91E-4AC2-88BC-20428FB23104}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnas.wns.CnasHCSManagerUC</RootNamespace>
+    <AssemblyName>CnasHCSManagerUC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CnasBaseUC">
+      <HintPath>..\CnasBaseOCX\bin\Debug\CnasBaseUC.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Excel.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.C1Excel.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Pdf.4, Version=4.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.C1Pdf.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.C1Report.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.Win.C1Command.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.Win.C1FlexGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Gauge.4, Version=4.0.20143.9, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\C1.Win.C1Gauge.4.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView">
+      <HintPath>..\Libraries\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\Libraries\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HCSCM_department_equipment_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_edit.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_issue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_issue.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_new.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_output.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_output.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_output.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_record.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_Selrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_equipment_manager_Selrecord.Designer.cs">
+      <DependentUpon>HCSCM_department_equipment_manager_Selrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager.Designer.cs">
+      <DependentUpon>HCSCM_entityset_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager_bindingRfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager_bindingRfid.Designer.cs">
+      <DependentUpon>HCSCM_entityset_manager_bindingRfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager_rfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_entityset_manager_rfid.Designer.cs">
+      <DependentUpon>HCSCM_entityset_manager_rfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_import.Designer.cs">
+      <DependentUpon>HCSCM_instrument_type_import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_orderNum_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_orderNum_manage.Designer.cs">
+      <DependentUpon>HCSCM_orderNum_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_orderNum_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_orderNum_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_orderNum_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_orderset_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_orderset_manager.Designer.cs">
+      <DependentUpon>HCSCM_orderset_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_image_batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_image_batch.Designer.cs">
+      <DependentUpon>HCSCM_set_image_batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_import.Designer.cs">
+      <DependentUpon>HCSCM_set_manage_import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_storage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_storage.designer.cs">
+      <DependentUpon>HCSCM_set_storage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_specialset_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_specialset_add.Designer.cs">
+      <DependentUpon>HCSCM_specialset_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_specialset_item_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_specialset_item_add.Designer.cs">
+      <DependentUpon>HCSCM_specialset_item_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_specialset_tem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_specialset_tem.Designer.cs">
+      <DependentUpon>HCSCM_specialset_tem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_storage_items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_storage_items.Designer.cs">
+      <DependentUpon>HCSCM_storage_items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_in_cycle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_in_cycle.Designer.cs">
+      <DependentUpon>HCSCM_in_cycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_manage.Designer.cs">
+      <DependentUpon>HCSCM_costcenter_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_costcenter_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_customer_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_customer_manage.Designer.cs">
+      <DependentUpon>HCSCM_customer_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_customer_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_customer_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_customer_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_costcenter_department.Designer.cs">
+      <DependentUpon>HCSCM_costcenter_department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_manage.Designer.cs">
+      <DependentUpon>HCSCM_department_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_department_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_department_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_department_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_in_cycle_location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_in_cycle_location.Designer.cs">
+      <DependentUpon>HCSCM_in_cycle_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_location_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_location_manage.Designer.cs">
+      <DependentUpon>HCSCM_location_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_location_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_location_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_location_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_cycle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_cycle.Designer.cs">
+      <DependentUpon>HCSCM_set_cycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_information.Designer.cs">
+      <DependentUpon>HCSCM_set_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_instrument_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_instrument_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_instrument_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_instrument_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_instrument_manage.Designer.cs">
+      <DependentUpon>HCSCM_instrument_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_manage.Designer.cs">
+      <DependentUpon>HCSCM_instrument_type_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_instrument_type_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_instrument_type_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_image.Designer.cs">
+      <DependentUpon>HCSCM_set_manage_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device.Designer.cs">
+      <DependentUpon>HCSCM_sterilizer_device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device_new.Designer.cs">
+      <DependentUpon>HCSCM_sterilizer_device_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_device_program.Designer.cs">
+      <DependentUpon>HCSCM_sterilizer_device_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_program.Designer.cs">
+      <DependentUpon>HCSCM_sterilizer_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_program_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_sterilizer_program_new.Designer.cs">
+      <DependentUpon>HCSCM_sterilizer_program_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_storage_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_storage_manage.Designer.cs">
+      <DependentUpon>HCSCM_storage_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_storage_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_storage_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_storage_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_storage_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_storage_set.Designer.cs">
+      <DependentUpon>HCSCM_storage_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_transport_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_transport_manage.Designer.cs">
+      <DependentUpon>HCSCM_transport_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_transport_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_transport_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_transport_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device_procedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device_procedure.Designer.cs">
+      <DependentUpon>HCSCM_plasticenvelop_device_procedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_program.Designer.cs">
+      <DependentUpon>HCSCM_plasticenvelop_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_program_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_program_new.Designer.cs">
+      <DependentUpon>HCSCM_plasticenvelop_program_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager.Designer.cs">
+      <DependentUpon>HCSCM_set_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_item.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_item_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_item_add.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_item_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_material.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_material_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_material_new.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_material_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_new.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device.Designer.cs">
+      <DependentUpon>HCSCM_plasticenvelop_device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_plasticenvelop_device_new.Designer.cs">
+      <DependentUpon>HCSCM_plasticenvelop_device_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_edit.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_set_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_new.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_set_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manager_set_select.Designer.cs">
+      <DependentUpon>HCSCM_set_manager_set_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_item_number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_manage_item_number.Designer.cs">
+      <DependentUpon>HCSCM_set_manage_item_number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_size.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_size.Designer.cs">
+      <DependentUpon>HCSCM_set_size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_vender_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_vender_manage.Designer.cs">
+      <DependentUpon>HCSCM_vender_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_vender_manage_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_vender_manage_new.Designer.cs">
+      <DependentUpon>HCSCM_vender_manage_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_washing_device.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HCSCM_washing_device.Designer.cs">
+      <DependentUpon>HCSCM_washing_device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_washing_device_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_washing_device_new.Designer.cs">
+      <DependentUpon>HCSCM_washing_device_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_washing_device_procedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_washing_device_procedure.Designer.cs">
+      <DependentUpon>HCSCM_washing_device_procedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_washing_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_washing_program.Designer.cs">
+      <DependentUpon>HCSCM_washing_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_washing_program_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_washing_program_new.Designer.cs">
+      <DependentUpon>HCSCM_washing_program_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCSCM_set_image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HCSCM_set_image.Designer.cs">
+      <DependentUpon>HCSCM_set_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager.resx">
+      <DependentUpon>HCSCM_department_equipment_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_edit.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_issue.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_new.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_output.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_output.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_record.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_equipment_manager_Selrecord.resx">
+      <DependentUpon>HCSCM_department_equipment_manager_Selrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_entityset_manager.resx">
+      <DependentUpon>HCSCM_entityset_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_entityset_manager_bindingRfid.resx">
+      <DependentUpon>HCSCM_entityset_manager_bindingRfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_entityset_manager_rfid.resx">
+      <DependentUpon>HCSCM_entityset_manager_rfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_instrument_type_import.resx">
+      <DependentUpon>HCSCM_instrument_type_import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_orderNum_manage.resx">
+      <DependentUpon>HCSCM_orderNum_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_orderNum_manage_new.resx">
+      <DependentUpon>HCSCM_orderNum_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_orderset_manager.resx">
+      <DependentUpon>HCSCM_orderset_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_image_batch.resx">
+      <DependentUpon>HCSCM_set_image_batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manage_import.resx">
+      <DependentUpon>HCSCM_set_manage_import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_storage.resx">
+      <DependentUpon>HCSCM_set_storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_specialset_add.resx">
+      <DependentUpon>HCSCM_specialset_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_specialset_item_add.resx">
+      <DependentUpon>HCSCM_specialset_item_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_specialset_tem.resx">
+      <DependentUpon>HCSCM_specialset_tem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_storage_items.resx">
+      <DependentUpon>HCSCM_storage_items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_in_cycle.resx">
+      <DependentUpon>HCSCM_in_cycle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_costcenter_department.resx">
+      <DependentUpon>HCSCM_costcenter_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_manage.resx">
+      <DependentUpon>HCSCM_department_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_department_manage_new.resx">
+      <DependentUpon>HCSCM_department_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_in_cycle_location.resx">
+      <DependentUpon>HCSCM_in_cycle_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_location_manage.resx">
+      <DependentUpon>HCSCM_location_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_location_manage_new.resx">
+      <DependentUpon>HCSCM_location_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_cycle.resx">
+      <DependentUpon>HCSCM_set_cycle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_information.resx">
+      <DependentUpon>HCSCM_set_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_instrument_manage_new.resx">
+      <DependentUpon>HCSCM_instrument_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_instrument_manage.resx">
+      <DependentUpon>HCSCM_instrument_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_instrument_type_manage.resx">
+      <DependentUpon>HCSCM_instrument_type_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_instrument_type_manage_new.resx">
+      <DependentUpon>HCSCM_instrument_type_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manage_image.resx">
+      <DependentUpon>HCSCM_set_manage_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_sterilizer_device.resx">
+      <DependentUpon>HCSCM_sterilizer_device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_sterilizer_device_new.resx">
+      <DependentUpon>HCSCM_sterilizer_device_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_sterilizer_device_program.resx">
+      <DependentUpon>HCSCM_sterilizer_device_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_sterilizer_program.resx">
+      <DependentUpon>HCSCM_sterilizer_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_sterilizer_program_new.resx">
+      <DependentUpon>HCSCM_sterilizer_program_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_storage_manage.resx">
+      <DependentUpon>HCSCM_storage_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_storage_manage_new.resx">
+      <DependentUpon>HCSCM_storage_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_storage_set.resx">
+      <DependentUpon>HCSCM_storage_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_transport_manage.resx">
+      <DependentUpon>HCSCM_transport_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_transport_manage_new.resx">
+      <DependentUpon>HCSCM_transport_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_costcenter_manage.resx">
+      <DependentUpon>HCSCM_costcenter_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_costcenter_manage_new.resx">
+      <DependentUpon>HCSCM_costcenter_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_customer_manage.resx">
+      <DependentUpon>HCSCM_customer_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_customer_manage_new.resx">
+      <DependentUpon>HCSCM_customer_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_plasticenvelop_device_procedure.resx">
+      <DependentUpon>HCSCM_plasticenvelop_device_procedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_plasticenvelop_program.resx">
+      <DependentUpon>HCSCM_plasticenvelop_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_plasticenvelop_program_new.resx">
+      <DependentUpon>HCSCM_plasticenvelop_program_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager.resx">
+      <DependentUpon>HCSCM_set_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_item.resx">
+      <DependentUpon>HCSCM_set_manager_item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_item_add.resx">
+      <DependentUpon>HCSCM_set_manager_item_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_material.resx">
+      <DependentUpon>HCSCM_set_manager_material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_material_new.resx">
+      <DependentUpon>HCSCM_set_manager_material_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_new.resx">
+      <DependentUpon>HCSCM_set_manager_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_plasticenvelop_device.resx">
+      <DependentUpon>HCSCM_plasticenvelop_device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_plasticenvelop_device_new.resx">
+      <DependentUpon>HCSCM_plasticenvelop_device_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_set_edit.resx">
+      <DependentUpon>HCSCM_set_manager_set_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_set_new.resx">
+      <DependentUpon>HCSCM_set_manager_set_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manager_set_select.resx">
+      <DependentUpon>HCSCM_set_manager_set_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_manage_item_number.resx">
+      <DependentUpon>HCSCM_set_manage_item_number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_size.resx">
+      <DependentUpon>HCSCM_set_size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_vender_manage.resx">
+      <DependentUpon>HCSCM_vender_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_vender_manage_new.resx">
+      <DependentUpon>HCSCM_vender_manage_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_washing_device.resx">
+      <DependentUpon>HCSCM_washing_device.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_washing_device_new.resx">
+      <DependentUpon>HCSCM_washing_device_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_washing_device_procedure.resx">
+      <DependentUpon>HCSCM_washing_device_procedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_washing_program.resx">
+      <DependentUpon>HCSCM_washing_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_washing_program_new.resx">
+      <DependentUpon>HCSCM_washing_program_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HCSCM_set_image.resx">
+      <DependentUpon>HCSCM_set_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasBarcodeLib\CnasBarcodeLib.csproj">
+      <Project>{f8646414-0c9c-49bb-9da3-3923bf78a398}</Project>
+      <Name>CnasBarcodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseClassServer\CnasBaseClassServer.csproj">
+      <Project>{12f14118-e740-455b-9eed-155f84992db6}</Project>
+      <Name>CnasBaseClassServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseInterface\CnasBaseInterface.csproj">
+      <Project>{8f3574df-3d48-4e40-8c01-19bda5016463}</Project>
+      <Name>CnasBaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasBaseOCX\CnasBaseUC.csproj">
+      <Project>{3f618a86-b770-4b42-99fe-9ea316f348cc}</Project>
+      <Name>CnasBaseUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasCameraUC\CnasCameraUC.csproj">
+      <Project>{e6052609-a070-41d5-85b9-acaba91170c5}</Project>
+      <Name>CnasCameraUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasHCSSystemUC\CnasHCSSystemUC.csproj">
+      <Project>{1097bd34-d984-4c78-9dcf-1e00bf8ea632}</Project>
+      <Name>CnasHCSSystemUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CnasUI\CnasUI.csproj">
+      <Project>{6da6f7db-5916-4d3b-93a1-35597e40f209}</Project>
+      <Name>CnasUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.Common\CRD.Common.csproj">
+      <Project>{7cf59281-c9ba-47ca-b049-644f55e86d36}</Project>
+      <Name>CRD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.WinUI\CRD.WinUI.csproj">
+      <Project>{3da5d631-16f3-4733-9fe0-71eeb24cd493}</Project>
+      <Name>CRD.WinUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\cancel.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

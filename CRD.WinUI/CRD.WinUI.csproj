@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DA5D631-16F3-4733-9FE0-71EEB24CD493}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRD.WinUI</RootNamespace>
+    <AssemblyName>CRD.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientUtils.cs" />
+    <Compile Include="ColorSpace.cs" />
+    <Compile Include="Editors\DataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterFrom1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterFrom1.Designer.cs">
+      <DependentUpon>EnterFrom1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnterUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterUserControl.Designer.cs">
+      <DependentUpon>EnterUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EntryForm.Designer.cs">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase1.Designer.cs">
+      <DependentUpon>FormBase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FunctionFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FunctionFormBase.Designer.cs">
+      <DependentUpon>FunctionFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBoxForm.Designer.cs">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SkinForm.Designer.cs">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TipForm.Designer.cs">
+      <DependentUpon>TipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HSLFilter.cs" />
+    <Compile Include="IForms\IMainForm.cs" />
+    <Compile Include="Misc\Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\CommandButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\ContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\CustomScrollbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\GroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\ListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\PictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\SubClass.cs" />
+    <Compile Include="Misc\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\ToolStripRenderer.cs" />
+    <Compile Include="Misc\TreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\TreeView.Designer.cs">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\EnterFrom1.resx">
+      <DependentUpon>EnterFrom1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnterUserControl.resx">
+      <DependentUpon>EnterUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase1.resx">
+      <DependentUpon>FormBase1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FunctionFormBase.resx">
+      <DependentUpon>FunctionFormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxForm.resx">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SkinForm.resx">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TipForm.resx">
+      <DependentUpon>TipForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\Button.resx">
+      <DependentUpon>Button.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\button\arrow.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bcenter.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bcenter_noshader.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bleft.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bleft_noshader.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bright.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\bright_noshader.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\check.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\check2.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\radio.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\radio2.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\toolbar_down.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\btndown.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\btnfore.bmp" />
+    <EmbeddedResource Include="Resources\Common\button\btnnomal.bmp" />
+    <Content Include="Resources\Common\cursor\hand.cur" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\borderbl.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\borderbm.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\borderbr.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\borderml.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\bordermr.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\bordertl.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\bordertm.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\bordertr.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\dialog_close.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\dialog_close_cleft.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\dialog_close_left.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbclose.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbleft.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbmax.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbmin.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbnormal.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tbright.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tcleft.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\tcright.bmp" />
+    <EmbeddedResource Include="Resources\Common\dialog2009\bg.bmp" />
+    <Content Include="Resources\Common\icon\arrow_down.bmp" />
+    <Content Include="Resources\Common\icon\arrow_up.bmp" />
+    <Content Include="Resources\Common\icon\certified.bmp" />
+    <Content Include="Resources\Common\icon\close.bmp" />
+    <Content Include="Resources\Common\icon\hand.bmp" />
+    <Content Include="Resources\Common\icon\lock.bmp" />
+    <Content Include="Resources\Common\icon\LZ-01.bmp" />
+    <Content Include="Resources\Common\icon\LZ-02.bmp" />
+    <Content Include="Resources\Common\icon\LZ-03.bmp" />
+    <Content Include="Resources\Common\icon\LZ-04.bmp" />
+    <Content Include="Resources\Common\icon\LZ-05.bmp" />
+    <Content Include="Resources\Common\icon\LZ-06.bmp" />
+    <Content Include="Resources\Common\icon\LZ.bmp" />
+    <Content Include="Resources\Common\icon\LZh-01.bmp" />
+    <Content Include="Resources\Common\icon\LZh-02.bmp" />
+    <Content Include="Resources\Common\icon\LZh-03.bmp" />
+    <Content Include="Resources\Common\icon\LZh-04.bmp" />
+    <Content Include="Resources\Common\icon\LZh-05.bmp" />
+    <Content Include="Resources\Common\icon\LZh-06.bmp" />
+    <Content Include="Resources\Common\icon\phone.bmp" />
+    <Content Include="Resources\Common\icon\play.bmp" />
+    <Content Include="Resources\Common\icon\qqhome.bmp" />
+    <Content Include="Resources\Common\icon\sitdown.bmp" />
+    <Content Include="Resources\Common\icon\Tipicon.ico" />
+    <Content Include="Resources\Common\icon\watch.bmp" />
+    <Content Include="Resources\Common\list\del.bmp" />
+    <Content Include="Resources\Common\list\spin_nex.bmp" />
+    <Content Include="Resources\Common\list\spin_pre.bmp" />
+    <Content Include="Resources\Common\menu\hall_sys_icon.bmp" />
+    <Content Include="Resources\Common\menu\iconbg.bmp" />
+    <Content Include="Resources\Common\menu\iconbg2.bmp" />
+    <Content Include="Resources\Common\menu\menu_icon_bg.bmp" />
+    <Content Include="Resources\Common\menu\menu_sel_left.bmp" />
+    <Content Include="Resources\Common\menu\menu_sel_mid.bmp" />
+    <Content Include="Resources\Common\menu\menu_sel_right.bmp" />
+    <EmbeddedResource Include="Resources\Common\msgbox\tiperror.png" />
+    <EmbeddedResource Include="Resources\Common\msgbox\tipnorm.png" />
+    <EmbeddedResource Include="Resources\Common\msgbox\tipques.png" />
+    <EmbeddedResource Include="Resources\Common\msgbox\tipwarn.png" />
+    <EmbeddedResource Include="Resources\Common\scroll\downarrow.png" />
+    <EmbeddedResource Include="Resources\Common\scroll\scroll.bmp" />
+    <EmbeddedResource Include="Resources\Common\scroll\ThumbBottom.png" />
+    <EmbeddedResource Include="Resources\Common\scroll\ThumbMiddle.png" />
+    <EmbeddedResource Include="Resources\Common\scroll\uparrow.png" />
+    <Content Include="Resources\Common\splitter\bg.bmp" />
+    <Content Include="Resources\Common\splitter\bg1.bmp" />
+    <Content Include="Resources\Common\splitter\bg2.bmp" />
+    <Content Include="Resources\Common\splitter\bg3.bmp" />
+    <Content Include="Resources\Common\splitter\down.bmp" />
+    <Content Include="Resources\Common\splitter\left.bmp" />
+    <Content Include="Resources\Common\splitter\right.bmp" />
+    <Content Include="Resources\Common\splitter\up.bmp" />
+    <Content Include="Resources\Common\tab\next.bmp" />
+    <Content Include="Resources\Common\tab\pre.bmp" />
+    <EmbeddedResource Include="Resources\Common\tab\TabIcons.bmp" />
+    <Content Include="Resources\Common\tab\tab_item_left.bmp" />
+    <Content Include="Resources\Common\tab\tab_item_mid.bmp" />
+    <Content Include="Resources\Common\tab\tab_item_right.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\about.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\bg.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\borderbl.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\borderbm.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\borderbr.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\borderl.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\borderr.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\bordertl.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\bordertm.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Border\bordertr.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Button\BlueVip.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\CloseBtn.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Button\ColorBtn.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\Default.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\ItemShop.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\MaxBtn.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Button\MenuBtn.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\MinBtn.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Button\OfficialWebsite.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\RestrBtn.bmp" />
+    <EmbeddedResource Include="Resources\Common\Tip\close_btn.bmp" />
+    <EmbeddedResource Include="Resources\Common\Tip\tipbg.bmp" />
+    <EmbeddedResource Include="Resources\Common\Tip\tips-nest.bmp" />
+    <EmbeddedResource Include="Resources\Common\Tip\watch_btn_hover.ico" />
+    <EmbeddedResource Include="Resources\Common\Tip\watch_btn_normal.ico" />
+    <EmbeddedResource Include="Resources\Common\Tip\watch_btn_press.ico" />
+    <EmbeddedResource Include="Resources\MainWin\Button\tl-close.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\tl-miniz.png" />
+    <EmbeddedResource Include="Resources\MainWin\Button\tl-windows.png" />
+    <Content Include="Resources\MainWin\button_help.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\HallTitle.bmp" />
+    <Content Include="Resources\MainWin\maintab.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\cs-logo.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\header-bg.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\logo-txt.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tb-config.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tb-help.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tb-power.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\top-bg.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\logo.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\sb-btn-lv1-1.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\sb-btn-lv1-2.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\sb-btn-lv1-3.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\sb-btn-lv2.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tl-close.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tl-miniz.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tl-window.png" />
+    <EmbeddedResource Include="Resources\MainWin\OurwayPhoto\tl-windows.png" />
+    <Content Include="Resources\MainWin\QQGame.bmp" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\1.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\2.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\3.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\4.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\5.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\6.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\7.png" />
+    <EmbeddedResource Include="Resources\MainWin\Shading\8.png" />
+    <Content Include="Resources\MainWin\split.bmp" />
+    <Content Include="Resources\MainWin\Tray\loading01-16.ico" />
+    <Content Include="Resources\MainWin\Tray\loading01-256.ico" />
+    <Content Include="Resources\MainWin\Tray\loading02-16.ico" />
+    <Content Include="Resources\MainWin\Tray\loading02-256.ico" />
+    <Content Include="Resources\MainWin\Tray\loading02-xp.ico" />
+    <Content Include="Resources\MainWin\Tray\loading03-16.ico" />
+    <Content Include="Resources\MainWin\Tray\loading03-256.ico" />
+    <Content Include="Resources\MainWin\Tray\loading04-16.ico" />
+    <Content Include="Resources\MainWin\Tray\loading04-256.ico" />
+    <Content Include="Resources\MainWin\Tray\QGm_16.ico" />
+    <Content Include="Resources\MainWin\Tray\QGm_256.ico" />
+    <Content Include="Resources\MainWin\web\back.bmp" />
+    <Content Include="Resources\MainWin\web\web_bbs.png" />
+    <Content Include="Resources\MainWin\web\web_home.png" />
+    <Content Include="Resources\MainWin\web\web_line.bmp" />
+    <Content Include="Resources\MainWin\web\web_next.png" />
+    <Content Include="Resources\MainWin\web\web_pre.png" />
+    <Content Include="Resources\MainWin\web\web_spliter.png" />
+    <Content Include="Resources\MainWin\web\web_stop.png" />
+    <Content Include="Resources\MainWin\web\web_updt.png" />
+    <EmbeddedResource Include="Resources\Skin\btn.png" />
+    <EmbeddedResource Include="Resources\Skin\colors.bmp" />
+    <EmbeddedResource Include="Resources\Skin\tab.bmp" />
+    <EmbeddedResource Include="Resources\Skin\textures.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CnasClientBaseClass\CnasBaseClassClient.csproj">
+      <Project>{3d243b7c-dcfe-4bdc-8adf-ef93db171705}</Project>
+      <Name>CnasBaseClassClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRD.Common\CRD.Common.csproj">
+      <Project>{7cf59281-c9ba-47ca-b049-644f55e86d36}</Project>
+      <Name>CRD.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
